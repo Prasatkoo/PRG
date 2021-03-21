@@ -1,0 +1,151 @@
+body {
+    margin: 0 auto;
+    background-color: #498fe2;
+    text-align: center;
+}
+
+.header {
+    color: white;
+    margin-top: 5rem;
+}
+
+.footer {
+    font-size: 1.2rem;
+    color: white;
+}
+
+@media screen and (min-width: 600px) {
+    .ads {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 40px;
+        height: 60px;
+        width: 100%;
+    }
+
+    .you {
+        color: red;
+    }
+    .you:hover{
+        color: darkred;
+    }
+
+    .inst {
+        color: palevioletred;
+    }
+    .inst:hover {
+        color: hotpink;
+    }
+
+    .git {
+        color: black;
+    }
+    .git:hover{
+        color: grey;
+    }
+
+    .falldown {
+        display: none;
+    }
+
+    .bars {
+        display: none;
+    }
+
+    .headnavigation {
+        box-shadow: 2px 3px 4px 5px black;
+        font-size: 1.8rem;
+        height: 45px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        background-color: grey;
+        font-family: "Corbel Light";
+    }
+
+    .na {
+        color: white;
+        text-decoration: none;
+    }
+
+    .na:hover {
+        color: lightskyblue;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .ads {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 40px;
+        height: 60px;
+        width: 100%;
+    }
+
+    .you {
+        color: red;
+    }
+
+    .inst {
+        color: palevioletred;
+    }
+
+    .git {
+        color: black;
+    }
+
+    .falldown {
+        display: none;
+        width: 7rem;
+        background-color: grey;
+        box-shadow: 3px 6px 9px black;
+        font-family: "Corbel Light";
+    }
+
+    .headnavigation {
+        display: none;
+    }
+
+    .na {
+        color: white;
+        text-decoration: none;
+    }
+
+    .navigation {
+        box-shadow: 2px 3px 4px 5px black;
+        background-color: grey;
+        width: 100%;
+        height: 45px;
+    }
+
+    .hamback {
+        width: 40px;
+        height: 40px;
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bars {
+        font-size: 1.8rem;
+    }
+
+    .hamback :hover .falldown {
+        position: relative;
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+        background-color: grey;
+
+
+    }
+
+    .falldown :hover {
+        color: lightskyblue;
+    }
+
+
+}
