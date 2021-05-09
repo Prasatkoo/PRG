@@ -1,24 +1,28 @@
-let array2;
-let count = 0;
-let count3 = 0;
-let div;
-let a;
-let field = document.getElementById("field");
-let field2 = document.getElementById("box");
-let fin;
-let fin2
-let infield = [];
-let cover = [];
-let save = [];
-let save2 = [];
-let canclick = true;
 
-let onload = function () {
+let loadin = function () {
+    let array2;
+    let count = 0;
+    let count3 = 0;
+    let final = 0;
+    let div, a;
+    let field = document.getElementById("field");
+    let field2 = document.getElementById("box");
+    let fin;
+    let fin2
+    let infield = [];
+    let cover = [];
+    let save = [];
+    let save2 = [];
+    let canclick = true;
 
     let array = ["😊", "😍", "😂", "🤣", "❤", "💋", "😒", "😘"];
     array2 = array.concat(array);
     fin = shuffle(array2);
     fin2 = display(fin);
+
+
+
+
 
 
     function shuffle(array) {
@@ -71,16 +75,18 @@ let onload = function () {
                     count3++;
                 }
             }
-            console.log(count3)
             if (count3 === 2) {
                 if (save[0] === save[1]) {
                     let displayed = document.querySelectorAll(".displayed");
                     for (let i = 0; i < displayed.length; i++) {
                         displayed.item(i).className = "underBox displayed done";
+                        final++;
+
                     }
                     save2.push(save[0], save[1])
 
-                } else {
+                }
+                else {
                     let reset = function () {
                         let displayed = document.querySelectorAll(".displayed")
                         for (let i = 0; i < displayed.length; i++) {
@@ -93,6 +99,12 @@ let onload = function () {
                     canclick = false;
                     setTimeout(reset, 2000);
                 }
+                if (final === 72){
+                document.getElementById("field").innerHTML =
+                    '<div class="winscreen">\n'+
+                    '<div>You won!</div>'
+                    '    </div> '
+                }
 
                 count3 = 0;
                 save = [];
@@ -102,7 +114,7 @@ let onload = function () {
         }
     }
 }
-window.onload = onload();
+window.onload = loadin();
 
 
 
